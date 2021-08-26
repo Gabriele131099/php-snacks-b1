@@ -63,7 +63,7 @@ $students = [
     foreach ($students as $student) {
         echo $student['name'];
         echo ' '.$student['surname'];
-        $sum = array_sum ($student['voti'])/7;
+        $sum = array_sum ($student['voti'])/count($student['voti']);
         $media = round($sum, 2);
         echo ', Media: '.$media.'<br>';
             
