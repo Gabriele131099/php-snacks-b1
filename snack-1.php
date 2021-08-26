@@ -8,12 +8,28 @@
 </head>
 <body>
     <?php
-            $home = 'Olimpia Milano';
-            $out = 'Cantu';
-            $homeScore = 55;
-            $outScore = 60;
+            $partite = [
+               [
+                    'home' => 'Olimpia Milano',
+                    'out' => 'Cantù',
+                    'homeScore' => '55'
+                    'outScore' => '60'
+                ],
+                [
+                    'home' => 'Dinamo',
+                    'out' => 'Virtus Roma',
+                    'homeScore' => '35'
+                    'outScore' =>  '60'
+                ]
+
+            ]
             
-            echo $home .' - '. $out . ' | '. $homeScore . '-' . $outScore;
+            for($i = 0; $i < count($partite); $i++){
+                //$string = $partite[$i]['casa'] . '-'
+                $string = "{$partite[$i]['home']} - {$partite[$i]['out']} | {$partite[$i]['homeScore']}-{$partite[$i]['outScore']}<br/>";
+                echo $string;
+               }
+               
     ?>
 
     <!-- 
@@ -48,7 +64,7 @@
 
         5
 
-        Creare un array contenente qualche alunno di un’ipotetica classe.
+    Creare un array contenente qualche alunno di un’ipotetica classe.
         Ogni alunno avrà i seguenti dati:
         nome
         cognome
@@ -56,7 +72,7 @@
         Stampare nome, cognome e la media dei voti di ogni alunno.
         PHP
 
-        PHPSnack 4
+        PHPSnack 4    
 
         6
 
