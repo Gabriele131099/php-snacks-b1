@@ -73,7 +73,7 @@ foreach ($posts as $data => $libro) {
         echo ', '.$row['author'];
         echo ', '.$row['text'] . '<br>';
     }
-    }?>
+}?>
 
 </body>
 </html>
