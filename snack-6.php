@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 </head>
 <body>
     <!--
@@ -40,21 +41,21 @@
     ];
     foreach ($db as $key => $worker) {
         if ($key==='teachers') {
-            echo "<div style='color: #77e419'> -- " . $key . '</div>';
+            echo "<div class='verde'> -- " . $key;
         }if ($key==='pm') {
-            echo "<div style='color: #1822e8'> -- " . $key . '</div>';
+            echo "<div class='blue'> -- " . $key;
         }
         foreach ($worker as $k) {
             if ($key==='teachers') {
-                echo "<span style='color: #77e419'>" .  $k['name'] . '</span>';
-                echo "<span style='color: #77e419'>" . ' '.$k['lastname'] . '</span><br>';
+                echo '<br>'.$k['name'] .' '.$k['lastname'].'<br>';
 
             }if ($key==='pm') {
-                echo "<span style='color: #1822e8'>" .  $k['name'] . '</span>';
-                echo "<span style='color: #1822e8'>" . ' '.$k['lastname'] . '</span><br>';
+                echo '<br>'.$k['name'] .' '.$k['lastname'].'<br>';
 
             }    
+           
         }
+        echo '</div><br>';
     }
  
 ?>
