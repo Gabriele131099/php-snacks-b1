@@ -39,24 +39,27 @@
             ]
         ]
     ];
+    $green='';
+    $blue='';
     foreach ($db as $key => $worker) {
         if ($key==='teachers') {
-            echo "<div class='verde'> -- " . $key;
-        }if ($key==='pm') {
-            echo "<div class='blue'> -- " . $key;
+            $green .= "<div class='verde'> -- " . $key;
+        }
+        if ($key==='pm') {
+            $blue .="<div class='blue'> -- " . $key;
         }
         foreach ($worker as $k) {
             if ($key==='teachers') {
-                echo '<br>'.$k['name'] .' '.$k['lastname'].'<br>';
-
-            }if ($key==='pm') {
-                echo '<br>'.$k['name'] .' '.$k['lastname'].'<br>';
-
+                $green .='<br>'.$k['name'] .' '.$k['lastname'].'<br>';
+            }
+            if ($key==='pm') {
+                $blue .='<br>'.$k['name'] .' '.$k['lastname'].'<br>';
             }    
-           
         }
-        echo '</div><br>';
+
     }
+    echo $green.'</div>';
+    echo $blue.'</div>';
  
 ?>
 </body>
