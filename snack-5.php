@@ -20,12 +20,20 @@
     -->
 
     <?php
-    $testo = "Sono stati i primi abitanti di quel vasto Continente posto al di là dell'Oceano che, una volta finito sulle carte degli Europei a partire dal XVI secolo, sarebbe divenuto terra di colonizzazione con le drammatiche conseguenze sulle popolazioni preesistenti che, pur essendo a tutti note, costituiscono sempre una parte solo secondaria della storia. Eppure il lungo viaggio che portò gruppi umani ad attraversare lo stretto di Bering, quando una striscia di terre emerse lo consentiva almeno 12.000 anni fa, è da sempre oggett o di ricerche scientifiche: un po' perché il fascino dei nativi americani resta una costante nella storia degli studi, un po' perché può capitare occasionalmente di incappare in qualche dato che conferma come siamo parte di un grande puzzle genetico attraverso il quale è possibile tracciare le stesse linee della storia dell'umanità.";
+    $testo = "Sono stati i primi abitanti di quel vasto Continente posto al di là dell'Oceano che,
+     una volta finito sulle carte degli Europei a partire dal XVI secolo, sarebbe divenuto terra di colonizzazione 
+     con le drammatiche conseguenze sulle popolazioni preesistenti che, pur essendo a tutti note, costituiscono
+      sempre una parte solo secondaria della storia. 
+      Eppure il lungo viaggio che portò gruppi umani ad attraversare lo stretto di Bering, quando una striscia di terre emerse lo consentiva almeno 12000 anni fa, 
+      è da sempre oggett o di ricerche scientifiche: un po' perché il fascino dei nativi americani resta una 
+      costante nella storia degli studi, un po' perché può capitare occasionalmente di incappare in qualche dato che 
+      conferma come siamo parte di un grande puzzle genetico attraverso il quale è possibile tracciare le stesse linee della storia dell'umanità.";
    
     $paragrafi = explode('.',$testo);
-    for ($i=0; $i <count($paragrafi) ; $i++) { 
-        echo '<p>'.$paragrafi[$i].'</p>';
+    for ($i=0; $i <count($paragrafi)-1 ; $i++) { 
+        echo '<p>'.$paragrafi[$i].'.</p>';
     }
+
 ?>
 <?php 
 
